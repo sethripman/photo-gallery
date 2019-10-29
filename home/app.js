@@ -31,7 +31,7 @@ hornsFilter.addEventListener('change', () => {
     }
     else {
         filteredHorns = images.filter(image => {
-            return image.horns == filter;
+            return image.horns >= filter;
         });
     }
     render(filteredHorns);
