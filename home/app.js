@@ -4,6 +4,7 @@ import renderImage from './render-image.js';
 
 const list = document.querySelector('.horns');
 const hornTypeFilter = document.querySelector('.corn-type-filter');
+const hornsFilter = document.querySelector('.horns-filter');
 
 hornTypeFilter.addEventListener('change', () => {
     const filter = hornTypeFilter.value;
@@ -18,6 +19,21 @@ hornTypeFilter.addEventListener('change', () => {
         });
     }
 
+    render(filteredHorns);
+});
+
+hornsFilter.addEventListener('change', () => {
+    const filter = hornsFilter.value;
+    let filteredHorns = null;
+
+    if (!filter) {
+        filteredHorns = images;
+    }
+    else {
+        filteredHorns = images.filter(image => {
+            return image.horns == filter;
+        });
+    }
     render(filteredHorns);
 });
 
