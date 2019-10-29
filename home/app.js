@@ -14,7 +14,7 @@ hornTypeFilter.addEventListener('change', () => {
     }
     else {
         filteredHorns = images.filter(horn => {
-            return horn.type === filter;
+            return horn.keyword === filter;
         });
     }
 
