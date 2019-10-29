@@ -28,16 +28,21 @@ h1 {
     padding: 10px;
 }
 
+.horns {
+    width: 100%;
+}
+
 .unihorns {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 10px;
 }
 
 ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 li {
